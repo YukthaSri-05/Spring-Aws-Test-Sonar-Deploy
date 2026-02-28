@@ -13,14 +13,12 @@ public class CseControllerTest {
     CseController c;
 
     @Test
-    void testAddition() {
-        int result = c.addCSE(10, 20);
-        assertEquals(30, result);
-    }
+    void testAdditionWithRollNo() {
+        String expectedMessage = 
+            "After performing the addition, the final output is 30. My roll number is 23MH1A05N8.";
 
-    @Test
-    void testRollNoMessage() {
-        String message = c.getRollNoMessage();
-        assertEquals("After performing the addition, the final output is 30. My roll number is 23MH1A05N8.", message);
+        String actualMessage = c.addCSE(10, 20);
+
+        assertEquals(expectedMessage, actualMessage);
     }
 }

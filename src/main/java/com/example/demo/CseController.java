@@ -8,12 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CseController {
 
     @GetMapping("/cseadd")
-    public int addCSE(@RequestParam int a, @RequestParam int b) {
-        return a + b;
-    }
-
-    @GetMapping("/rollno")
-    public String getRollNoMessage() {
-        return "After performing the addition, the final output is 30. My roll number is 23MH1A05N8.";
+    public String addCSE(@RequestParam int a, @RequestParam int b) {
+        int result = a + b;
+        return "After performing the addition, the final output is " 
+                + result + ". My roll number is 23MH1A05N8.";
     }
 }
