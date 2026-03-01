@@ -42,27 +42,19 @@ The pipeline integrates GitHub, Maven, JUnit, SonarQube, and AWS to enforce qual
 Fetches source code from GitHub repository.
 
 ### 2️⃣ Install Dependencies
-```bash
-mvn clean install -DskipTests
-```
+
 
 ### 3️⃣ Unit Testing
-```bash
-mvn test
-```
+
 - Publishes JUnit test reports in Jenkins.
 
 ### 4️⃣ SonarQube Analysis
-```bash
-mvn clean verify sonar:sonar
-```
+
 - Performs static code analysis.
 - Validates Quality Gate.
 
 ### 5️⃣ Build JAR
-```bash
-mvn clean package -DskipTests
-```
+
 
 ### 6️⃣ Deploy to AWS EC2
 - Transfers JAR file to `/home/ubuntu/app`
